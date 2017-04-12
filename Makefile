@@ -1,6 +1,6 @@
 
 SUBDIRS =
-PROJ = json_parser
+PROJ = ktm_poi
 
 ### Machine flags
 #
