@@ -1,0 +1,22 @@
+
+ * description
+  ktm_poi - collection of tools that import filtered lists of KTM dealership/service locations and creates a csv that can be converted into a POI (points of interest) file - great for offline GPS devices
+
+ * but why?
+  well, bikes do break. and it's nice to be able to quickly find out where the closest friendly service is by just looking at the gps.
+
+ * dependencies
+   - a linux/bsd/cygwin environment with a C compiler, iconv, sed and curl
+   - libjson-c
+
+ * how to use
+  run `make`
+  edit get_dealers.sh and select the countries you're interested in
+  run `bash get_dealers.sh`
+  import resulting file (tmp/europe.csv) into a conversion tool like POILoader
+  save converted file to your GPS device
+
+  Author:          Petre Rodan <petre.rodan@simplex.ro>
+  Available from:  https://github.com/rodan/ktm_poi
+  License:         GPLv3
+

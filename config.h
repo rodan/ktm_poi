@@ -1,0 +1,3 @@
+
+#define CONFIG_DEBUG
+
