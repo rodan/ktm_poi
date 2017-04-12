@@ -13,7 +13,7 @@ create_csv() {
     rm -f tmp/*.csv
     for i in tmp/*.json; do
         output=`echo $i | sed 's|\.json$|\.csv|'`
-        ./json_parser -i "${i}" | sed 's|  | |g;s|http://||g' > "${output}"
+        ./ktm_poi -i "${i}" | sed 's|  | |g;s|http://||g' > "${output}"
     done
 }
 
