@@ -1,11 +1,11 @@
 #!/bin/bash
 
-countries="united+kingdom germany austria france greece serbia croatia bosnia bulgaria romania hungary slovenia slovakia czechia netherlands belgium italy spain portugal denmark sweden norway finland monaco switzerland slovakia hungary"
+eu_countries="andorra austria belarus belgium bulgaria croatia czech+republic denmark estonia finland france germany greece hungary hungary ireland italy latvia lithuania montenegro netherlands norway poland portugal romania serbia slovakia slovenia spain sweden switzerland turkey ukraine united+kingdom"
 
 get_countries() {
-    for country in ${countries}; do
+    for country in ${eu_countries}; do
         sleep 2
-        curl --silent "http://www.ktm.com/ro/api/dealer/search?location=${country}&isCountrySearch=true" 2>&1 | iconv -f utf-8 -t ascii//TRANSLIT | sed 's|<p>||g;s|<br/>||g;s|</p>||g;s|,"[a-z]*":null||g' > "tmp/${country}.json"
+        curl --silent "http://www.ktm.com/en/api/dealer/search?location=${country}&isCountrySearch=true" 2>&1 | iconv -f utf-8 -t ascii//TRANSLIT | sed 's|<p>||g;s|<br/>||g;s|</p>||g;s|,"[a-z]*":null||g' > "tmp/${country}.json"
     done
 }
 
@@ -18,7 +18,7 @@ create_csv() {
 }
 
 concatenate_all() {
-    cat tmp/*.csv >> tmp/europe.csv
+    cat tmp/*.csv >> tmp/ktm_eu.csv
 }
 
 mkdir -p tmp
