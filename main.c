@@ -113,7 +113,7 @@ int main(int argc, char **argv, char **env)
 
             if (strlen(get(el_obj, "name")) > 0) {
                 //fprintf(stdout, ", %s", get(el_obj, "name"));
-                fprintf(stdout, ", \"%s\"", remove_char_from_str(get(el_obj, "name"), '-'));
+                fprintf(stdout, ", \"%s\"", remove_char_from_str(remove_char_from_str(get(el_obj, "name"), '-'), '"'));
                 //fprintf(stdout, ", \"%s - ", remove_char_from_str(get(el_obj, "name"), '-'));
             }
 

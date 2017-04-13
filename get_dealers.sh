@@ -22,7 +22,7 @@ concatenate_all() {
 }
 
 mkdir -p tmp
-get_countries
+#get_countries
 create_csv
 concatenate_all
 
