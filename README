@@ -9,12 +9,16 @@
    - a linux/bsd/cygwin environment with a C compiler, iconv, sed and curl
    - libjson-c
 
- * how to use
+ * how to use the tool
   run `make`
   edit get_dealers.sh and select the countries you're interested in
   run `bash get_dealers.sh`
   import resulting file (tmp/europe.csv) into a conversion tool like POILoader
   save converted file to your GPS device
+
+ * example output can be found here: https://github.com/rodan/ktm_poi/tree/master/result
+ download by clicking on the ktm_eu.* file, right-click on 'Raw' and select 'Save link as ...'
+ the two files provided contain all EU locations and can be directly used in a Garmin gps device.
 
   Author:          Petre Rodan <petre.rodan@simplex.ro>
   Available from:  https://github.com/rodan/ktm_poi
